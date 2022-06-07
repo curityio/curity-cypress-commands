@@ -49,10 +49,10 @@ describe('Curity Cypress commands tests', () => {
       redirectURI: 'http://localhost/cb',
       state: 'abc',
       prompt: 'none',
-      extraParams: {
-        code_challenge: '1234',
-        code_challenge_method: 'plain'
-      }
+      extraParams: new Map([
+        ['code_challenge', '1234'],
+        ['code_challenge_method', 'plain']
+  ])
     })
         .then(url => {
           expect(url.toString())

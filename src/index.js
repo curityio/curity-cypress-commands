@@ -38,8 +38,8 @@ const buildAuthorizationURLCommand = (parameters) => {
     }
 
     if (parameters.extraParams) {
-        for (const parameter in parameters.extraParams) {
-            params.append(parameter, parameters.extraParams[parameter])
+        for (const [parameterName, parameterValue] of parameters.extraParams) {
+            params.append(parameterName, parameterValue)
         }
     }
 
