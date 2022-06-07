@@ -16,6 +16,7 @@
 
 /// <reference path="../../src/index.d.ts" />
 
+
 import { registerCurityCommands } from "../../src";
 
 describe('Curity Cypress commands tests', () => {

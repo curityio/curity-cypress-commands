@@ -131,6 +131,4 @@ const getCommandName = (prefix, name) => {
     }
 }
 
-module.exports = {
-    registerCurityCommands
-}
+export { registerCurityCommands }
