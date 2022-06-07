@@ -1,0 +1,28 @@
+{
+    "name": "@curity/cypress-commands",
+    "version": "1.0.0",
+    "description": "Cypress commands used to test the Curity Identity Server plugins",
+    "main": "src",
+    "homepage": "https://github.com/curityio/curity-cypress-commands",
+    "repository": "curityio/curity-cypress-commands",
+    "files": [
+        "src"
+    ],
+    "types": "src",
+    "scripts": {
+        "cypress.open": "cypress open",
+        "cypress.run": "cypress run --browser chrome",
+        "cypress.run.headless": "cypress run --headless --browser chrome",
+        "merge-report": "npx mochawesome-merge cypress/reports/separate-reports/*.json > cypress/reports/index.json",
+        "generate-report": "npx marge --reportDir cypress/reports/ cypress/reports/index.json",
+        "cypress.generate.reports": "npm run merge-report; npm run generate-report"
+    },
+    "author": "Curity AB",
+    "license": "Apache-2.0",
+    "dependencies": {
+    },
+    "devDependencies": {
+        "cypress": "^10.0.3",
+        "mochawesome": "^7.1.3"
+    }
+}
